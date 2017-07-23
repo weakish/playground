@@ -1,0 +1,7 @@
+require 'rake/remote_task'
+
+set :domain, 'ace'
+
+remote_task :foo do
+  run "ls"
+end
