@@ -1,0 +1,4 @@
+source 'https://ruby.taobao.org'
+
+gem 'bundle'
+gem 'yard-doctest'
