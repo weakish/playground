@@ -1,0 +1,11 @@
+/home/weakish/repo/sources/playground/csharp/bin/Debug/netcoreapp2.2/csharp.deps.json
+/home/weakish/repo/sources/playground/csharp/bin/Debug/netcoreapp2.2/csharp.runtimeconfig.json
+/home/weakish/repo/sources/playground/csharp/bin/Debug/netcoreapp2.2/csharp.runtimeconfig.dev.json
+/home/weakish/repo/sources/playground/csharp/bin/Debug/netcoreapp2.2/csharp.dll
+/home/weakish/repo/sources/playground/csharp/bin/Debug/netcoreapp2.2/csharp.pdb
+/home/weakish/repo/sources/playground/csharp/obj/Debug/netcoreapp2.2/csharp.csprojAssemblyReference.cache
+/home/weakish/repo/sources/playground/csharp/obj/Debug/netcoreapp2.2/csharp.csproj.CoreCompileInputs.cache
+/home/weakish/repo/sources/playground/csharp/obj/Debug/netcoreapp2.2/csharp.AssemblyInfoInputs.cache
+/home/weakish/repo/sources/playground/csharp/obj/Debug/netcoreapp2.2/csharp.AssemblyInfo.cs
+/home/weakish/repo/sources/playground/csharp/obj/Debug/netcoreapp2.2/csharp.dll
+/home/weakish/repo/sources/playground/csharp/obj/Debug/netcoreapp2.2/csharp.pdb
