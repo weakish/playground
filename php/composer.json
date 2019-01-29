@@ -1,0 +1,5 @@
+{
+  "require": {
+    "leancloud/leancloud-sdk": "v0.8.1"
+  }
+}
