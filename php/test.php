@@ -2,7 +2,6 @@
 require_once 'vendor/autoload.php';
 
 use \LeanCloud\Client;
-use \LeanCloud\LeanObject;
 use LeanCloud\Query;
 
 Client::initialize("r7WOBCoFgBlpuRoBTIWjb7XI-gzGzoHsz", "PT4FpSvABfO0wKCD4WYA0wdK", "EgGgxNEHixJqEVqe1Bwi6G2O");
