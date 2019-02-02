@@ -1,5 +1,8 @@
 # Demos for LeanCloud SDKs
 
+Note, appId and appKey in the code are outdated.
+You need to replace them with your own appId and appKey.
+
 ## null
 
 | SDK | readNonExist | readNull | writeNew | writeOld |
