@@ -43,3 +43,18 @@ function h(animal: Animal): Cat {
 }
 
 higher(h, cat) // works
+
+function hf(f: (animal: Animal) => Cat, arg: Animal) {
+    f(arg).say()
+}
+
+function p(cat: Cat): Animal {
+    alert("calling p")
+    cat.say()
+    const anAnimal = new Animal()
+    return anAnimal
+}
+
+// bivariant function subtyping!
+hf(p, animal)
+hf(p, cat)
