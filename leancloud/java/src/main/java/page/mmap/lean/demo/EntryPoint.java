@@ -1,14 +1,16 @@
+package page.mmap.lean.demo
+
 import cn.leancloud.AVLogger;
 import cn.leancloud.AVObject;
-//import cn.leancloud.AVQuery;
 import cn.leancloud.core.AVOSCloud;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
+
 public class EntryPoint {
     public static void main(String[] args) {
         AVOSCloud.setLogLevel(AVLogger.Level.DEBUG);
-        AVOSCloud.initialize("r7WOBCoFgBlpuRoBTIWjb7XI-gzGzoHsz", "PT4FpSvABfO0wKCD4WYA0wdK");
+        AVOSCloud.initialize("jYDw5C3mQvCJ0Us6yOVT8De8-gzGzoHsz", "fwj014f87mhTGAqQxOfNkcU6");
 //        AVObject fromJava = new AVObject("FromJava");
 //        fromJava.put("hello", "Java");
 //        fromJava.put("empty", null);
