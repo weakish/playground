@@ -4,10 +4,13 @@ class Animal {
     }
 }
 
-class Cat {
+class Cat extends Animal {
     say() {
         alert("I am a cat.")
     }
+    mew() {
+        alert("mew")
+    }	
 }
 
 function letAnimalSay(animal: Animal) {
@@ -44,17 +47,21 @@ function h(animal: Animal): Cat {
 
 higher(h, cat) // works
 
+// After TypeScript 2.6, with `--strict`, function parameters are check contravariantly.
 function hf(f: (animal: Animal) => Cat, arg: Animal) {
     f(arg).say()
 }
 
 function p(cat: Cat): Animal {
-    alert("calling p")
-    cat.say()
-    const anAnimal = new Animal()
-    return anAnimal
+    cat.mew()
+    return animal
 }
 
-// bivariant function subtyping!
 hf(p, animal)
 hf(p, cat)
+let q: (animal: Animal) => Cat = p
+
+function v(arg: string): string {
+  return arg
+}
+let u: (arg: string | number) => string = v
