@@ -1,65 +1,28 @@
 package page.mmap.lean.demo;
 
+import cn.leancloud.AVLogger;
 import cn.leancloud.AVObject;
 import cn.leancloud.core.AVOSCloud;
 
+import java.util.Arrays;
+
+
+
 public class App {
     public static void main(String[] args) {
+        AVObject.registerSubclass(Travel.class);
+        AVObject.registerSubclass(Form.class);
         AVOSCloud.initialize("jYDw5C3mQvCJ0Us6yOVT8De8-gzGzoHsz", "fwj014f87mhTGAqQxOfNkcU6");
-        AVObject fromJava = new AVObject("FromJava");
-        fromJava.put("hello", "Java");
-        fromJava.put("empty", null);
-        fromJava.save();
-//        AVQuery<AVObject> avQuery = new AVQuery<>("TestObject");
-//        avQuery.getInBackground("5c45436a7565716f24d459ae").subscribe(new Observer<AVObject>() {
-//            @Override
-//            public void onSubscribe(Disposable disposable) { }
-//
-//            @Override
-//            public void onNext(AVObject avObject) {
-//                String hello = avObject.getString("hello");
-//                System.out.printf("hello: %s\n", hello);
-//                String nonExist = avObject.getString("nonExist");
-//                System.out.printf("nonExist: %s\n", nonExist);
-//                String empty = avObject.getString("empty");
-//                System.out.printf("empty: %s", empty);
-//            }
-//
-//            @Override
-//            public void onError(Throwable throwable) {
-//
-//            }
-//
-//            @Override
-//            public void onComplete() {
-//
-//            }
-//        });
-
-//        AVObject fromJava = AVObject.createWithoutData("FromJava", "5c4aaf5844d904004d6359a0");
-//        fromJava.fetchInBackground().subscribe(new Observer<AVObject>() {
-//            @Override
-//            public void onSubscribe(Disposable disposable) {
-//
-//            }
-//
-//            @Override
-//            public void onNext(AVObject avObject) {
-//                String hello = avObject.getString("hello");
-//                System.out.printf("hello: %s", hello);
-//                avObject.put("hello", null);
-//                avObject.save();
-//            }
-//
-//            @Override
-//            public void onError(Throwable throwable) {
-//
-//            }
-//
-//            @Override
-//            public void onComplete() {
-//
-//            }
-//        });
+        AVOSCloud.setLogLevel(AVLogger.Level.DEBUG);
+//        AVObject fromJava = new AVObject("FromJava");
+//        fromJava.put("hello", "Java");
+//        fromJava.put("empty", null);
+//        fromJava.save();
+        Travel travel = new Travel();
+        Form form1 = new Form();
+        Form form2 = new Form();
+        Form form3 = new Form();
+        travel.addAll("forms", Arrays.asList(form1, form2, form3));
+        travel.save();
     }
 }
