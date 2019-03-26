@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Jerry</title>
+</head>
+<body>
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
+<!-- 即时通讯服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.3.0/dist/realtime.browser.min.js"></script>
+<script type="text/javascript">
+
+localStorage.setItem('debug', 'leancloud*,LC*');
+var { Query, User } = AV;
+var { Realtime, TextMessage, Event　} = AV;
+
+var APP_ID = '3AJTBW5QyGw17hLxNN3njGHW-gzGzoHsz';
+var APP_KEY = 'P8cKdEvRxusfuR27MuhvFOzr';
+
+var realtime = new Realtime({
+  appId: '3AJTBW5QyGw17hLxNN3njGHW-gzGzoHsz',
+  appKey: 'P8cKdEvRxusfuR27MuhvFOzr',
+});
+
+realtime.createIMClient('Jerry').then(function(jerry) {
+  jerry.on(Event.MESSAGE, function(message, conversation) {
+    console.log('Message received: ' + message.text);
+  });
+}).catch(console.error);
+
+</script>
+</body>
+</html>

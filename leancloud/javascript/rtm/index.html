@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>forum-19940</title>
+</head>
+<body>
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
+<!-- 即时通讯服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.3.0/dist/realtime.browser.min.js"></script>
+<script type="text/javascript">
+
+localStorage.setItem('debug', 'leancloud*,LC*');
+var { Query, User } = AV;
+var { Realtime, TextMessage } = AV;
+
+var APP_ID = '3AJTBW5QyGw17hLxNN3njGHW-gzGzoHsz';
+var APP_KEY = 'P8cKdEvRxusfuR27MuhvFOzr';
+
+
+var realtime = new Realtime({
+  appId: '3AJTBW5QyGw17hLxNN3njGHW-gzGzoHsz',
+  appKey: 'P8cKdEvRxusfuR27MuhvFOzr',
+});
+
+// Tom 用自己的名字作为 clientId，获取 IMClient 对象实例
+realtime.createIMClient('Tom').then(function(tom) {
+  // 创建与Jerry之间的对话
+  return tom.createConversation({
+    members: ['Jerry'],
+    name: 'Tom & Jerry',
+    unique: true
+  });
+}).then(function(conversation) {
+  // 发送消息
+  return conversation.send(new TextMessage('呼叫耗子！'));
+}).then(function(message) {
+  console.log('Tom & Jerry', '发送成功！');
+}).catch(console.error);
+</script>
+</body>
+</html>
