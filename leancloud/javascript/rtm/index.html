@@ -5,7 +5,7 @@
 </head>
 <body>
 <!-- 存储服务 -->
-<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js"></script>
+<script src="av-min.js"></script>
 <!-- 即时通讯服务 -->
 <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.3.0/dist/realtime.browser.min.js"></script>
 <script type="text/javascript">
@@ -33,9 +33,12 @@ realtime.createIMClient('Tom').then(function(tom) {
   });
 }).then(function(conversation) {
   // 发送消息
-  return conversation.send(new TextMessage('呼叫耗子！'));
-}).then(function(message) {
-  console.log('Tom & Jerry', '发送成功！');
+  conversation.send(new TextMessage('呼叫耗子！')).then(function(message) {
+    console.log('Tom & Jerry', '发送成功！');
+    conversation.recall(message).then(function(recalledMessage) {
+      console.log(recalledMessage)
+    });
+  });
 }).catch(console.error);
 </script>
 </body>
