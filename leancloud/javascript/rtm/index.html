@@ -10,7 +10,7 @@
 <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.3.0/dist/realtime.browser.min.js"></script>
 <script type="text/javascript">
 
-localStorage.setItem('debug', 'leancloud*,LC*');
+// localStorage.setItem('debug', 'leancloud*,LC*');
 var { Query, User } = AV;
 var { Realtime, TextMessage } = AV;
 
@@ -39,7 +39,10 @@ realtime.createIMClient('Tom').then(function(tom) {
       console.log(recalledMessage)
     });
   });
-}).catch(console.error);
+  conversation.send(new TextMessage('Hi, Jerry!')).then(function(message) {
+    console.log('Said Hi to Jerry.');
+  });
+});
 </script>
 </body>
 </html>
