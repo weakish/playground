@@ -5,13 +5,15 @@ from leancloud import LeanEngineError
 
 engine = Engine()
 
+import os
+app_env = os.environ['LEANCLOUD_APP_ENV']
 
 @engine.define
 def hello(**params):
     if 'name' in params:
         return 'Hello, {}!'.format(params['name'])
     else:
-        return 'Hello, LeanCloud!'
+        return app_env
 
 
 @engine.before_save('Todo')

@@ -5,6 +5,7 @@ from datetime import datetime
 from flask import Flask
 from flask import render_template
 from flask_sockets import Sockets
+import os
 
 from views.todos import todos_view
 
@@ -24,6 +25,9 @@ def index():
 def time():
     return str(datetime.now())
 
+@app.route('/env')
+def environment():
+    return os.environ['LEANCLOUD_APP_ENV']
 
 @sockets.route('/echo')
 def echo_socket(ws):
@@ -34,7 +38,6 @@ def echo_socket(ws):
 @app.route('/mysql')
 def connect_to_mysql():
     result = ''
-    import os
     import mysql.connector
     host = os.environ['MYSQL_HOST_MYRDB']
     port = os.environ['MYSQL_PORT_MYRDB']
