@@ -55,6 +55,10 @@ app.get('/mysql', function(req, res) {
   });  
 });
 
+app.get('/env', function(req, res) {
+  res.json({node_env: process.env.NODE_ENV})
+});
+
 
 // 可以将一类的路由单独保存在一个文件中
 app.use('/todos', require('./routes/todos'));
