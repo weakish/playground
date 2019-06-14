@@ -12,6 +12,8 @@ def hello(**params):
     if 'name' in params:
         return 'Hello, {}!'.format(params['name'])
     else:
+        import time
+        time.sleep(35)
         return 'Hello, LeanCloud!'
 
 @engine.define
