@@ -18,7 +18,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/dad11751b427ec84c4032e4036dc241174df4a4f",
                 "reference": "dad11751b427ec84c4032e4036dc241174df4a4f",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ext-curl": "*",
