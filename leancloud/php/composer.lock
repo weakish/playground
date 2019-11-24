@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "291475047d6f24e15c7b0c03cddbbcc6",
+    "content-hash": "0c198cbeca6d989d1af3c775ca437c93",
     "packages": [
         {
             "name": "leancloud/leancloud-sdk",

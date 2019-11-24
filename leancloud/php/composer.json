@@ -1,5 +1,11 @@
 {
   "require": {
     "leancloud/leancloud-sdk": "v0.8.1"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    }
   }
 }
