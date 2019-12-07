@@ -40,3 +40,24 @@ const arrayType = [1, 2, 3]
  */
 const tupleType = ["one", 1]
 
+// Extra
+
+// type cast syntax borrowed from Closure
+// Without type cast, `one` would have an inferred literal type `1`. 
+const one = genericFunction(/** @type {number} */(1))
+// However, there is no `as const` assertion yet.
+// https://github.com/Microsoft/TypeScript/issues/30445
+
+/** @typedef {{x: number, y: number}} Pointer */
+/** @type {Pointer} */
+const typeAlias = {x: 0, y: 0}
+
+/** 
+ * @enum {function(number): number}
+ */
+const immutableObjectLiteral = {
+    /** @type {function(number)} */
+    succ: n => n + 1,
+    /** @type {function(number)} */
+    pred: n => n - 1
+}
