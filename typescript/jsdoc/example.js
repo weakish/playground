@@ -1,11 +1,12 @@
-'use strict'
 /* adapted from https://www.v2ex.com/t/626139 */
+
+'use strict'
 
 /**
  * @template {string} T
  * @typedef {{name: T, type: string}} Foo
  */
-/*
+/**
  * @template {string} T
  * @param {Foo<T>[]} arr
  * @return {Record<T, {}>} result
@@ -19,7 +20,7 @@ function transform(arr) {
         .reduce((o, k) => (o[k] = {}, o), /** @type {Record<T, {}>} */({}))
 }
 
-/**
+/*
  * @type {Foo<'tom'>}
  */
 const a = { name: 'tom', type: 'confirm' }
