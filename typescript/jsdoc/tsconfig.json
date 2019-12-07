@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+	    "noImplicitReturns": true,
+	    "noFallthroughCasesInSwitch": true,
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "noEmitOnError": true,
+        "incremental": true
+    }
+}
