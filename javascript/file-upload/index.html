@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<div>
+		<input type="file" id="input">
+	</div>
+<script>
+	const selectedFile = document.getElementById('input').files[0];
+	console.log(JSON.stringify(selectedFile));
+</script>
+</body>
