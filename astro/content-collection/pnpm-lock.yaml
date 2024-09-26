@@ -1700,8 +1700,8 @@ packages:
   vfile@5.3.7:
     resolution: {integrity: sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==}
 
-  vite@4.5.3:
-    resolution: {integrity: sha512-kQL23kMeX92v3ph7IauVkXkikdDRsYMGTVl5KY2E9OY4ONLvkHf04MDTbnfo6NKxZiDLWzVpP5oTa8hQD8U3dg==}
+  vite@4.5.5:
+    resolution: {integrity: sha512-ifW3Lb2sMdX+WU91s3R0FyQlAyLxOzCSCP37ujw0+r5POeHPwe6udWVIElKQq8gk3t7b8rkmvqC6IHBpCff4GQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -2313,8 +2313,8 @@ snapshots:
       undici: 5.28.4
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.3
-      vitefu: 0.2.4(vite@4.5.3)
+      vite: 4.5.5
+      vitefu: 0.2.4(vite@4.5.5)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.21.1
@@ -3785,7 +3785,7 @@ snapshots:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  vite@4.5.3:
+  vite@4.5.5:
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.31
@@ -3793,9 +3793,9 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitefu@0.2.4(vite@4.5.3):
+  vitefu@0.2.4(vite@4.5.5):
     optionalDependencies:
-      vite: 4.5.3
+      vite: 4.5.5
 
   vscode-oniguruma@1.7.0: {}
 
