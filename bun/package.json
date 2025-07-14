@@ -1,0 +1,17 @@
+{
+  "name": "bun",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "rehype-stringify": "^10.0.1",
+    "remark-obsidian": "git+https://github.com/weakish/johackim-remark-obsidian.git#internal-link-base-url",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
+  }
+}
