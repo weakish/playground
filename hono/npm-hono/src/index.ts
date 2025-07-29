@@ -7,6 +7,9 @@ app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
 
+// This works under bun, but not under Node.js
+// export default app
+
 serve({
   fetch: app.fetch,
   port: 3000
