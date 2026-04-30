@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "no-multi-assign": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "no-param-reassign": "error"
+  }
+}
