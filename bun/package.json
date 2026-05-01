@@ -1,27 +1,28 @@
 {
   "name": "bun",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
+  "type": "module",
+  "module": "index.ts",
   "scripts": {
-    "format": "deno fmt",
+    "format": "oxfmt .",
     "prepare": "husky",
     "lint": "FILES=\"$(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs' '*.mts' '*.cts')\"; if [ -n \"$FILES\" ]; then oxlint $FILES; else echo \"No lintable files found\"; fi",
     "lint:staged": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}": [
-      "deno fmt",
-      "oxlint"
-    ]
   },
   "devDependencies": {
     "@types/bun": "latest",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
+    "oxfmt": "^0.47.0",
     "oxlint": "^1.62.0"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs,mts,cts}": [
+      "oxfmt",
+      "oxlint"
+    ]
   }
 }
